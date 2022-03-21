@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "e772400d-7ef5-4e24-bfbd-4c86c75067be",
+		"name": "Mehtagold",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/reports/user_status/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"user_status",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mboro497@gmail.com\",\r\n    \"password\":\"KZCeG6sDHL8L4Vk#@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/accounts/login/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"accounts",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mboro497@gmail.com\",\r\n    \"password\":\"KZCeG6sDHL8L4Vk#@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/accounts/logout/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"accounts",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "latest update date and time",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/reports/get_last_update_time/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"get_last_update_time",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard: camera service(AI and Monitoring)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:37:28+05:30\",\r\n    \"end_date\":\"2022-03-22T00:37:28+05:30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/camera_service/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"camera_service",
+						""
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2022-03-21T00:37:28+05:30",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": "2022-03-22T00:37:28+05:30",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "{{key}}/",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard: Events history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:40:53+05:30\",\r\n    \"end_date\":\"2022-03-22T00:40:53+05:30\",\r\n    \"limit\":10,\r\n    \"offset\":0,\r\n    \"camera\":[\"all\"],\r\n    \"status\":[\"all\"],\r\n    \"objects\":[\"all\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/event_history_limit/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"event_history_limit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard: camera's health",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:40:53+05:30\",\r\n    \"end_date\":\"2022-03-22T00:40:53+05:30\",\r\n    \"marking_names\":null,\r\n    \"critical_status\":[\"Critical\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/camera_health/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"camera_health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard: non critical camera events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:40:53+05:30\",\r\n    \"end_date\":\"2022-03-22T00:40:53+05:30\",\r\n    \"marking_names\":null,\r\n    \"event_types\":[\"distort_detection\",\r\n    \"light_on_off_detection\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/non_critical_health/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"non_critical_health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard: vast system",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:46:26+05:30\",\r\n    \"end_date\":\"2022-03-22T00:46:26+05:30\",\r\n    \"marking_names\":null,\r\n    \"critical_status\":[\"Critical\"],\r\n    \"limit\":15,\r\n    \"offset\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/vast_system_health/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"vast_system_health",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person missing: camera list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"org_id\":[1,2],\r\n    \"start_date\":\"2022-03-21T00:54:26+05:30\",\r\n    \"end_date\":\"2022-03-22T00:54:26+05:30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/get_camera_list_for_person/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"get_camera_list_for_person",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person: Events history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:40:53+05:30\",\r\n    \"end_date\":\"2022-03-22T00:40:53+05:30\",\r\n    \"limit\":10,\r\n    \"offset\":0,\r\n    \"camera\":[\"all\"],\r\n    \"status\":[\"all\"],\r\n    \"objects\":[\"all\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/event_history_limit/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"event_history_limit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events History:  filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:59:29+05:30\",\r\n    \"end_date\":\"2022-03-22T00:59:29+05:30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/filters/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"filters",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events History: history limit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T00:59:29+05:30\",\r\n    \"end_date\":\"2022-03-22T00:59:29+05:30\",\r\n    \"orgID\":[1,2],\r\n    \"projectID\":[1,2],\r\n    \"limit\":10,\r\n    \"offset\":0,\r\n    \"camera\":[\"all\"],\r\n    \"status\":[\"all\"],\r\n    \"objects\":[\"all\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/event_history_limit/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"event_history_limit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Camera service: details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T01:09:29+05:30\",\r\n    \"end_date\":\"2022-03-22T01:09:29+05:30\",\r\n    \"orgID\":[1,2],\r\n    \"projectID\":[1,2],\r\n    \"limit\":10,\r\n    \"offset\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/camera_service_details/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"camera_service_details",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Camera health: tampering",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T01:13:03+05:30\",\r\n    \"end_date\":\"2022-03-22T01:13:03+05:30\",\r\n    \"marking_names\":null,\r\n    \"critical_status\":[\"Critical\"],\r\n    \"limit\":10,\r\n    \"offset\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/camera_health_tampering/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"camera_health_tampering",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Non critical camera events: distortion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\":\"2022-03-21T01:13:03+05:30\",\r\n    \"end_date\":\"2022-03-22T01:13:03+05:30\",\r\n    \"limit\":10,\r\n    \"event_types\":[\"distort_detection\"],\r\n    \"offset\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/reports/camera_distortion/",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"reports",
+						"camera_distortion",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "https://mehtagold.dashboard.paralaxiom.in"
+		},
+		{
+			"key": "key",
+			"value": "---",
+			"type": "string"
+		}
+	]
+}
